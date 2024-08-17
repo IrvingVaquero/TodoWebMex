@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ToDo_WebMex</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ToDo_WebMex.styles.css" asp-append-version="true" />
+    <link href="~/css/home/taskmanager/index.css" rel="stylesheet" asp-append-version="true"/>
+    @RenderSection("Estilos", required: false)
+</head>
+<body>
+    <header>
+        <nav id="header_nav">
+            <div class="header_container">
+                <div class="header_logo">
+                    <figure>
+                        <img src="~/assets/img/logo.jpeg" />
+                    </figure>
+                </div>
+                <div class="header_nameApp">
+                    <span>To-Do List</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main_global" class="pb-3">
+        @RenderBody()
+    </main>
+    
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
